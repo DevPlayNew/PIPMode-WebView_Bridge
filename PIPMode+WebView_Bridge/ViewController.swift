@@ -1,11 +1,5 @@
-//
-//  ViewController.swift
-//  PIPMode+WebView_Bridge
-//
-//  Created by 김원철 on 2022/05/22.
-//
-
 import UIKit
+import PIPKit
 
 class ViewController: UIViewController {
 
@@ -13,7 +7,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func PIPShow(_ sender: Any) {
+        let vc = PIPViewController()
+        PIPKit.show(with: vc)
+    }
+    @IBAction func PIPXIBShow(_ sender: Any) {
+        let vc = PIPXibViewController.viewController()
+        PIPKit.show(with: vc)
+    }
+    @IBAction func PIPClose(_ sender: Any) {
+        PIPKit.dismiss(animated: true)
+    }
 }
-

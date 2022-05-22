@@ -18,6 +18,8 @@
 		F90E53D22839FA9C0000B4D4 /* PIPMode_WebView_BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53D12839FA9C0000B4D4 /* PIPMode_WebView_BridgeTests.swift */; };
 		F90E53DC2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53DB2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITests.swift */; };
 		F90E53DE2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53DD2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift */; };
+		F90E53EB283A0FD60000B4D4 /* PIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */; };
+		F90E53ED283A0FE50000B4D4 /* PIPXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F90E53D72839FA9C0000B4D4 /* PIPMode+WebView_BridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIPMode+WebView_BridgeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90E53DB2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPMode_WebView_BridgeUITests.swift; sourceTree = "<group>"; };
 		F90E53DD2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPMode_WebView_BridgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPViewController.swift; sourceTree = "<group>"; };
+		F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPXibViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,6 @@
 				27CA4CC9EA58FE61DEF0E49E /* Pods-PIPMode+WebView_BridgeTests.debug.xcconfig */,
 				77ACFF79A684D9CF7D266938 /* Pods-PIPMode+WebView_BridgeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +143,8 @@
 			children = (
 				F90E53BA2839FA9B0000B4D4 /* AppDelegate.swift */,
 				F90E53BE2839FA9B0000B4D4 /* ViewController.swift */,
+				F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */,
+				F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */,
 				F90E53C02839FA9B0000B4D4 /* Main.storyboard */,
 				F90E53C32839FA9C0000B4D4 /* Assets.xcassets */,
 				F90E53C52839FA9C0000B4D4 /* LaunchScreen.storyboard */,
@@ -404,7 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90E53ED283A0FE50000B4D4 /* PIPXibViewController.swift in Sources */,
 				F90E53BF2839FA9B0000B4D4 /* ViewController.swift in Sources */,
+				F90E53EB283A0FD60000B4D4 /* PIPViewController.swift in Sources */,
 				F90E53BB2839FA9B0000B4D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
