@@ -3,7 +3,7 @@ import PIPKit
 
 class PIPViewController: UIViewController, PIPUsable {
         var initialState: PIPState { return .pip }
-        var pipSize: CGSize { return CGSize(width: 200.0, height: 200.0) }
+        var pipSize: CGSize { return CGSize(width: 200.0, height: 400) }
         
         override func viewDidLoad() {
             super.viewDidLoad()

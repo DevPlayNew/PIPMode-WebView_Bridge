@@ -20,6 +20,7 @@
 		F90E53DE2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53DD2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift */; };
 		F90E53EB283A0FD60000B4D4 /* PIPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */; };
 		F90E53ED283A0FE50000B4D4 /* PIPXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */; };
+		F964614A283DF0AA003F7720 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9646149283DF0AA003F7720 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F90E53DD2839FA9C0000B4D4 /* PIPMode_WebView_BridgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPMode_WebView_BridgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPViewController.swift; sourceTree = "<group>"; };
 		F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPXibViewController.swift; sourceTree = "<group>"; };
+		F9646149283DF0AA003F7720 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				F90E53BE2839FA9B0000B4D4 /* ViewController.swift */,
 				F90E53EA283A0FD60000B4D4 /* PIPViewController.swift */,
 				F90E53EC283A0FE50000B4D4 /* PIPXibViewController.swift */,
+				F9646149283DF0AA003F7720 /* WebViewController.swift */,
 				F90E53C02839FA9B0000B4D4 /* Main.storyboard */,
 				F90E53C32839FA9C0000B4D4 /* Assets.xcassets */,
 				F90E53C52839FA9C0000B4D4 /* LaunchScreen.storyboard */,
@@ -412,6 +415,7 @@
 				F90E53ED283A0FE50000B4D4 /* PIPXibViewController.swift in Sources */,
 				F90E53BF2839FA9B0000B4D4 /* ViewController.swift in Sources */,
 				F90E53EB283A0FD60000B4D4 /* PIPViewController.swift in Sources */,
+				F964614A283DF0AA003F7720 /* WebViewController.swift in Sources */,
 				F90E53BB2839FA9B0000B4D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
