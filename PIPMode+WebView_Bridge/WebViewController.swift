@@ -14,23 +14,11 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
     var configuration: WKWebViewConfiguration?
     var webView: WKWebView?
     var bridgeList: [String]?
+    var webViewUrl: String?
+    let contentController = WKUserContentController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-    }
-    
-    init(url: String, list: [String]) {
-        super.init(nibName: nil, bundle: nil)
-
-        configuration = WKWebViewConfiguration()
-        configuration?.userContentController = contentController
-        configuration?.websiteDataStore = WKWebsiteDataStore.nonPersistent()
-        configuration?.mediaTypesRequiringUserActionForPlayback = []
-        configuration?.allowsInlineMediaPlayback = true
-        configuration?.userContentController = contentController
-        configuration?.allowsPictureInPictureMediaPlayback = true
-        
         webView = WKWebView(frame: .zero, configuration: configuration!)
         self.view.addSubview(webView!)
         webView?.translatesAutoresizingMaskIntoConstraints = false
@@ -38,19 +26,36 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
         webView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         webView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         webView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        print(list)
-        bridgeList = list
-        for i in 0 ... bridgeList!.count - 1 {
-            addBridge(bridgeName: bridgeList![i])
+
+        if let list = bridgeList, list.count != 0 {
+            for i in 0 ... list.count - 1 {
+                addBridge(bridgeName: list[i])
+            }
         }
-        load(url: url)
+        
+        if let url = webViewUrl {
+            load(url: url)
+        }
+    }
+    
+    init(url: String, list: [String]) {
+        bridgeList = list
+        webViewUrl = url
+        super.init(nibName: nil, bundle: nil)
+        configuration = WKWebViewConfiguration()
+        configuration?.userContentController = contentController
+        configuration?.websiteDataStore = WKWebsiteDataStore.nonPersistent()
+        configuration?.mediaTypesRequiringUserActionForPlayback = []
+        configuration?.allowsInlineMediaPlayback = true
+        configuration?.userContentController = contentController
+        configuration?.allowsPictureInPictureMediaPlayback = true
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    internal func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print(message.name)
         print(message.body )
  
@@ -61,22 +66,20 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
         */
         default:
             print(message.name)
-            
         }
 
     }
     
-    let contentController = WKUserContentController()
+ 
     
     // Bridge 등록
-    func addBridge (bridgeName: String) {
+    private func addBridge (bridgeName: String) {
         contentController.add(self, name: bridgeName)
     }
     
-    func load(url: String) {
+    private  func load(url: String) {
         let url = URL (string: url)
         let requestObj = URLRequest(url: url!)
         webView?.load(requestObj)
-       
     }
 }
