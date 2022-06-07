@@ -134,7 +134,7 @@
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhL-jg-PsM">
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -228,9 +228,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bridgeInputView" destination="NAk-ip-M7n" id="vvx-Fj-fum"/>
                         <outlet property="bridgeListView" destination="yhL-jg-PsM" id="dBA-s0-otL"/>
-                        <outlet property="bridgeStringName" destination="NAk-ip-M7n" id="bC3-cq-nrC"/>
-                        <outlet property="urlLabel" destination="Tv7-zm-i5S" id="wiF-EM-8DP"/>
+                        <outlet property="urlInputView" destination="Tv7-zm-i5S" id="AjJ-M5-AEW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

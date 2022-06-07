@@ -27,12 +27,15 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
         webView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         webView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
 
-        if let list = bridgeList, list.count != 0 {
-            for i in 0 ... list.count - 1 {
-                addBridge(bridgeName: list[i])
-            }
-        }
         
+        print("keaton 11111")
+        if let list = bridgeList, list.count != 0 {
+            let bridgeList = list.map { addBridge(bridgeName: $0) }
+            print("keaton 09090909")
+            print (bridgeList)
+        }
+     
+
         if let url = webViewUrl {
             load(url: url)
         }
@@ -70,16 +73,18 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
 
     }
     
- 
-    
     // Bridge 등록
     private func addBridge (bridgeName: String) {
         contentController.add(self, name: bridgeName)
     }
     
     private  func load(url: String) {
-        let url = URL (string: url)
-        let requestObj = URLRequest(url: url!)
-        webView?.load(requestObj)
+        if let url = URL (string: url) {
+            let requestObj = URLRequest(url: url)
+            webView?.load(requestObj)
+        } else {
+            print("keaton222222")
+            self.removeFromParent()
+        }
     }
 }
